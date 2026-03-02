@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { config } from "@/config";
 
 export function Contact() {
@@ -52,10 +52,6 @@ export function Contact() {
                             loading="lazy"
                             allowFullScreen
                             referrerPolicy="no-referrer-when-downgrade"
-                            src={`https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY_HERE&q=${encodeURIComponent(contact.mapQuery)}`}
-                            // NOTE: In a real scenario, use a real Google Maps Embed URL or API Key. 
-                            // For this demo, we assume the user might not have a key, so we use a generic placeholder or the existing embed if available.
-                            // Reverting to generic embed for safety in demo:
                             src={`https://maps.google.com/maps?q=${encodeURIComponent(contact.mapQuery)}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
                         ></iframe>
                     </div>
